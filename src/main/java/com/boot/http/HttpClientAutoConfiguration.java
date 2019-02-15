@@ -104,7 +104,9 @@ public class HttpClientAutoConfiguration {
         return builder.build();
     }
 
-    public HttpTemplate httpTemplate(CloseableHttpClient httpClient){
-        return  new HttpTemplate(httpClient,httpClientProperties);
+    @Bean
+    @ConditionalOnMissingBean(HttpTemplate.class)
+    public HttpTemplate httpTemplate(CloseableHttpClient httpClient) {
+        return new HttpTemplate(httpClient, httpClientProperties);
     }
 }

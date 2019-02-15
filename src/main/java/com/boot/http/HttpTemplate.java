@@ -84,7 +84,9 @@ public class HttpTemplate {
         }
         addHeaders(httpRequest, headers);
         RequestConfig requestConfig = getRequestConfig(routeConfig);
-        httpRequest.setConfig(requestConfig);
+        if (httpRequest != null) {
+            httpRequest.setConfig(requestConfig);
+        }
         return doExecute(httpRequest);
     }
 
