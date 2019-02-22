@@ -28,11 +28,11 @@ public class HttpTemplate {
         return get(url, null);
     }
 
-    private String get(String url, Map<String, Object> params) throws Exception {
+    public String get(String url, Map<String, Object> params) throws Exception {
         return get(url, params, null);
     }
 
-    private String get(String url, Map<String, Object> params, Map<String, String> headers) throws Exception {
+    public String get(String url, Map<String, Object> params, Map<String, String> headers) throws Exception {
         return execute(url, params, headers, HttpGet.METHOD_NAME);
     }
 
@@ -40,11 +40,11 @@ public class HttpTemplate {
         return post(url, null);
     }
 
-    private String post(String url, Map<String, Object> params) throws Exception {
+    public String post(String url, Map<String, Object> params) throws Exception {
         return post(url, params, null);
     }
 
-    private String post(String url, Map<String, Object> params, Map<String, String> headers) throws Exception {
+    public String post(String url, Map<String, Object> params, Map<String, String> headers) throws Exception {
         return execute(url, params, headers, HttpPost.METHOD_NAME);
     }
 
@@ -61,15 +61,15 @@ public class HttpTemplate {
         return doExecute(httpRequest);
     }
 
-    private String query(String name) throws Exception {
+    public String query(String name) throws Exception {
         return query(name, null);
     }
 
-    private String query(String name, Map<String, Object> params) throws Exception {
+    public String query(String name, Map<String, Object> params) throws Exception {
         return query(name, params, null);
     }
 
-    private String query(String name, Map<String, Object> params, Map<String, String> headers) throws Exception {
+    public String query(String name, Map<String, Object> params, Map<String, String> headers) throws Exception {
         RouteConfig routeConfig = httpClientProperties.getRoutes().get(name);
         return execute(routeConfig, params, headers);
     }

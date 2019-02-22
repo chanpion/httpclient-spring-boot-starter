@@ -1,0 +1,13 @@
+spring:
+  httpclient:
+    connect-timeout: 100
+    socket-timeout: 3000
+    pool:
+      max-total: 2000
+      max-per-route: 500
+    routes:
+      baudu:
+        url: http://www.baidu.com
+        method: get
+        connect-timeout: 1000
+        socket-timetou: 1000
