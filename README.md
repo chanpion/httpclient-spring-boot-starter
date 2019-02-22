@@ -14,7 +14,7 @@ spring-booter-starter整合HttpClient，快速配置，方便使用
   ```
 - 添加配置，spring配置文件application.xml
 
-  ···
+  ```
     spring:
       httpclient:
         connect-timeout: 100
@@ -28,4 +28,4 @@ spring-booter-starter整合HttpClient，快速配置，方便使用
             method: get
             connect-timeout: 1000
             socket-timetou: 1000
-  ···
+  ```
