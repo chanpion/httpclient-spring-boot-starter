@@ -1,4 +1,4 @@
-# spring-boot-starter-httpclient
+# httpclient-spring-boot-starter
 
 spring-booter-starter整合HttpClient，快速配置，方便使用
 可单独配置每个调用服务的请求参数
