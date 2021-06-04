@@ -23,7 +23,7 @@
     <properties>
         <java.verison>1.8</java.verison>
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
-        <httpclient.version>4.5.6</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
     </properties>
 
 
